@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Archivo|Archivo+Narrow:608"
+    />
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="customs.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="counter">
+        <div class="counter-item">
+          <h4 class="header-title">Move</h4>
+          <div class="header-num">
+            <span id="move">00</span>/<span id="move-total"></span>
+          </div>
+        </div>
+        <div class="counter-item">
+          <h4 class="header-title">Time</h4>
+          <div class="header-num">
+            <span id="minutes">00</span>:<span id="seconds">00</span>
+          </div>
+        </div>
+      </div>
+      <div class="level">
+        <h4 class="header-title">Level</h4>
+        <div class="header-num">
+          <span id="level">01 </span>
+        </div>
+      </div>
+      <button id="level-control" class="level-control">...</button>
+    </header>
+    <main>
+      <div id="table" class="table"></div>
+      <div id="levelUp" class="level-up">
+        <div class="mode">
+          <h2>Very Good!</h2>
+          <button id="nextLevel">Level Up</button>
+          <button class="restart">¿Restart?</button>
+        </div>
+      </div>
+      <div id="gameOver" class="game-over">
+        <div class="mode">
+          <h2>Sorry</h2>
+          <p>You have run out of moves😭</p>
+          <button class="restart">¿Restart?</button>
+        </div>
+      </div>
+      <div id="time-oveer" class="game-over">
+        <div class="mode">
+          <h2>Sorry</h2>
+          <p>You have run out of time</p>
+          <button class="restart">¿Restart?</button>
+        </div>
+      </div>
+      <div id="endGame" class="end-game">
+        <div class="mode">
+          <h2>Congratulations!</h2>
+          <p>You have won all the levels🏆</p>
+          <button class="restart">¿Restart?</button>
+        </div>
+      </div>
+    </main>
+    <div class="level-selection">
+      <button id="close-level" class="close-level">&times;</button>
+      <ul></ul>
+    </div>
+    <audio
+      src="success.mp3"
+      class="sound"
+      id="sound-success"
+      preload="auto"
+    ></audio>
+    <audio
+      src="error.mp3"
+      class="sound"
+      id="sound-error"
+      preload="auto"
+    ></audio>
+    <audio
+      src="flip.mp3"
+      class="sound"
+      id="sound-flip"
+      preload="auto"
+    ></audio>
+
+    <script src="global.js"></script>
+    <script src="distribute-card.js"></script>
+    <script src="discover-compare.js"></script>
+    <script src="success-error.js"></script>
+    <script src="movement.js"></script>
+    <script src="timer.js"></script>
+    <script src="finish.js"></script>
+    <script src="change-level.js"></script>
+    <script src="game-over.js"></script>
+    <script src="initial.js"></script>
+  </body>
+</html>
